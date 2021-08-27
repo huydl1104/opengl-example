@@ -1,2 +1,3 @@
+include ':opengl-lib'
 include ':app'
 rootProject.name = "opengl-custom"
