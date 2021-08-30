@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.opengl_custom.activity.OpenGLES30Activity
+import com.example.opengl_custom.activity.SimpleActivity
 import com.example.opengl_custom.adapter.MainAdapter
 import com.example.opengl_custom.adapter.MyClickListener
 import kotlinx.android.synthetic.main.activity_main.*
@@ -12,7 +13,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     val list = arrayListOf(
-        "OpenGLES30Activity"
+        "OpenGLES30Activity",
+        "SimpleActivity"
 
     )
     private val mainAdapter = MainAdapter(list).apply {
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity() {
             override fun onClick(postion: Int) {
                 when(postion){
                     0->{customStartActivity(OpenGLES30Activity::class.java)}
+                    1->{customStartActivity(SimpleActivity::class.java)}
                 }
             }
         }
