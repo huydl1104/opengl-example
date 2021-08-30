@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Openglcustom">
-        <activity android:name=".activity.OpenGLES20Activity"></activity>
+        <activity android:name=".activity.OpenGLES30Activity"
+            android:label="GLES30"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

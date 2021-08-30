@@ -4,6 +4,7 @@ import android.content.Context
 import android.opengl.GLSurfaceView
 import android.util.AttributeSet
 import android.view.MotionEvent
+import com.example.opengl_lib.render.MyGLRenderer
 
 /**
  * @author yudongliang
@@ -13,7 +14,7 @@ import android.view.MotionEvent
 class MyGlSurfaceView @JvmOverloads constructor(context: Context,
                                                 attributeSet: AttributeSet? = null) :GLSurfaceView(context, attributeSet) {
 
-   private lateinit var mGLRenderer:MyGLRenderer
+   private var mGLRenderer: MyGLRenderer
 
    private val TOUCH_SCALE_FACTOR = 180.0f / 320
 
@@ -50,7 +51,7 @@ class MyGlSurfaceView @JvmOverloads constructor(context: Context,
                 if (x < width / 2) {
                     dy *= -1
                 }
-                mGLRenderer.setAngle(mGLRenderer.getAngle() + (dx + dy) * TOUCH_SCALE_FACTOR) // = 180.0f / 320
+                mGLRenderer.angle = mGLRenderer.angle + (dx + dy) * TOUCH_SCALE_FACTOR // = 180.0f / 320
                 requestRender()
             }
         }
