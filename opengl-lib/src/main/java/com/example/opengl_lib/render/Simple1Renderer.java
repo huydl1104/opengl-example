@@ -111,13 +111,13 @@ public class Simple1Renderer implements GLSurfaceView.Renderer
 		
 		// Initialize the buffers.
 		mTriangle1Vertices = ByteBuffer.allocateDirect(triangle1VerticesData.length * mBytesPerFloat)
-        .order(ByteOrder.nativeOrder()).asFloatBuffer();
+        .order(ByteOrder.nativeOrder()).asFloatBuffer();//设置字节的顺序，并转换为 Float类型的缓冲
 		mTriangle2Vertices = ByteBuffer.allocateDirect(triangle2VerticesData.length * mBytesPerFloat)
         .order(ByteOrder.nativeOrder()).asFloatBuffer();
 		mTriangle3Vertices = ByteBuffer.allocateDirect(triangle3VerticesData.length * mBytesPerFloat)
         .order(ByteOrder.nativeOrder()).asFloatBuffer();
 					
-		mTriangle1Vertices.put(triangle1VerticesData).position(0);
+		mTriangle1Vertices.put(triangle1VerticesData).position(0);//将顶点的数据放如缓冲区中，并设置起始值 0
 		mTriangle2Vertices.put(triangle2VerticesData).position(0);
 		mTriangle3Vertices.put(triangle3VerticesData).position(0);
 	}

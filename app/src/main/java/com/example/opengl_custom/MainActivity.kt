@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.opengl_custom.activity.BouncyCubeActivity
 import com.example.opengl_custom.activity.OpenGLES30Activity
 import com.example.opengl_custom.activity.Simple1Activity
 import com.example.opengl_custom.activity.SimpleActivity
@@ -16,8 +17,8 @@ class MainActivity : AppCompatActivity() {
     val list = arrayListOf(
         "OpenGLES30Activity",
         "SimpleActivity",
-        "Simple1Activity"
-
+        "Simple1Activity",
+        "BouncyCubeActivity"
     )
     private val mainAdapter = MainAdapter(list).apply {
         listener = object : MyClickListener {
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
                     0->{customStartActivity(OpenGLES30Activity::class.java)}
                     1->{customStartActivity(SimpleActivity::class.java)}
                     2->{customStartActivity(Simple1Activity::class.java)}
+                    3->{customStartActivity(BouncyCubeActivity::class.java)}
                 }
             }
         }

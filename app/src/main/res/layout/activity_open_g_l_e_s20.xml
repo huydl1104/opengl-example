@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".activity.OpenGLES30Activity">
 
-    <com.example.opengl_lib.view.MyGlSurfaceView
+    <com.example.opengl_lib.view.TestGlSurfaceView
         android:id="@+id/mySurfaceView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
