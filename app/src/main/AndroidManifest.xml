@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".activity.SimpleActivity"
             android:label="SimpleActivity" />
+        <activity android:name=".activity.Simple1Activity"
+            android:label="Simple1Activity" />
     </application>
 
     <uses-feature
